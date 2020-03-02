@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 const config = require("./config/db");
 const app = express();
 
+const music = require("./api/routes/music");
+app.use("/music", music);
+
 // Config DataBase and Mongoose
 mongoose.set("useCreateIndex", true);
 mongoose
