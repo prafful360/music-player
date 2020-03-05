@@ -33,9 +33,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // configure body-parser ends here
 
-// making multer.js a static file
-app.use("/uploads", express.static("uploads"));
-
 app.use(morgan("dev")); // Config Morgan
 //define first route
 app.get("/", (req, res) => {
@@ -44,3 +41,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is running on ${PORT}`);
 });
+// making multer.js a static file
+app.use("/uploads", express.static("uploads"));

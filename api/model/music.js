@@ -6,7 +6,7 @@ let musicSchema = mongoose.Schema({
   },
   music: {
     type: Object,
-    required: true
+    required: false
   },
   artist: {
     type: String,
